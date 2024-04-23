@@ -1,3 +1,3 @@
-public enum pitchType {
+public enum pitchTypes {
     FASTBALL, CHANGEUP, BREAKINGBALL
 }

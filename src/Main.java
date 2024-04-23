@@ -3,13 +3,14 @@ import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.AnchorPane;
 
 public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
             FXMLLoader loader = new FXMLLoader();
-            BorderPane root = (BorderPane)loader.load(getClass().getResource("PitchChart.fxml").openStream());
+            AnchorPane root = (AnchorPane) loader.load(getClass().getResource("Project4new.fxml").openStream());
             primaryStage.setScene(new Scene(root));
             primaryStage.show();
             root.requestFocus();

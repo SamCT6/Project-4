@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guiModel">
+   <children>
+      <Pane layoutX="25.0" layoutY="25.0" prefHeight="350.0" prefWidth="350.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dbe0e4" height="175.0" onMouseClicked="#Thirteen" stroke="BLACK" strokeType="INSIDE" width="175.0" x="175.0" y="175.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dbe0e4" height="175.0" onMouseClicked="#Ten" stroke="BLACK" strokeType="INSIDE" width="175.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dbe0e4" height="175.0" onMouseClicked="#Twelve" stroke="BLACK" strokeType="INSIDE" width="175.0" y="175.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dbe0e4" height="175.0" onMouseClicked="#Eleven" stroke="BLACK" strokeType="INSIDE" width="175.0" x="175.0" />
+            <StackPane layoutX="70.0" layoutY="70.0" prefHeight="210.0" prefWidth="210.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="70.0" onMouseClicked="#Two" stroke="BLACK" strokeType="INSIDE" width="70.0" StackPane.alignment="TOP_CENTER" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="70.0" onMouseClicked="#One" stroke="BLACK" strokeType="INSIDE" width="70.0" StackPane.alignment="TOP_LEFT" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="70.0" onMouseClicked="#Three" stroke="BLACK" strokeType="INSIDE" width="70.0" StackPane.alignment="TOP_RIGHT" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="70.0" onMouseClicked="#Four" stroke="BLACK" strokeType="INSIDE" width="70.0" StackPane.alignment="CENTER_LEFT" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="70.0" onMouseClicked="#Five" stroke="BLACK" strokeType="INSIDE" width="70.0" StackPane.alignment="CENTER" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="70.0" onMouseClicked="#Six" stroke="BLACK" strokeType="INSIDE" width="70.0" StackPane.alignment="CENTER_RIGHT" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="70.0" onMouseClicked="#Seven" stroke="BLACK" strokeType="INSIDE" width="70.0" StackPane.alignment="BOTTOM_LEFT" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="70.0" onMouseClicked="#Eight" stroke="BLACK" strokeType="INSIDE" width="70.0" StackPane.alignment="BOTTOM_CENTER" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="70.0" onMouseClicked="#Nine" stroke="BLACK" strokeType="INSIDE" width="70.0" StackPane.alignment="BOTTOM_RIGHT" />
+               </children>
+            </StackPane>
+         </children>
+      </Pane>
+      <VBox layoutX="400.0" layoutY="25.0" prefHeight="350.0" prefWidth="175.0">
+         <children>
+            <ChoiceBox fx:id="enterPitchType" onMouseDragged="#setPitchType" onMouseExited="#setPitchType" prefWidth="150.0" />
+            <TextField fx:id="enterVelo" onAction="#setPitchVelo" onInputMethodTextChanged="#setPitchVelo" promptText=" Enter Velocity Here" />
+            <CheckBox fx:id="swing" mnemonicParsing="false" text="Swing" />
+            <HBox>
+               <children>
+                  <Label text="Pitch Count: " />
+                  <Label text="0" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label text="Overall Strike Percentage: " />
+                  <Label text="0" />
+               </children>
+            </HBox>
+            <ProgressBar prefWidth="200.0" progress="0.57" />
+            <Label text="Fastball" />
+            <HBox>
+               <children>
+                  <Label text="Avergage Velo: " />
+                  <Label text="0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="199.0">
+               <children>
+                  <Label text="Strike Percentage:" />
+                  <Label text="0" />
+               </children>
+            </HBox>
+            <Label text="Change-Up" />
+            <HBox layoutX="10.0" layoutY="199.0">
+               <children>
+                  <Label text="Avergage Velo: " />
+                  <Label text="0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="224.0">
+               <children>
+                  <Label text="Strike Percentage:" />
+                  <Label text="0" />
+               </children>
+            </HBox>
+            <Label text="Curve Ball" />
+            <HBox layoutX="10.0" layoutY="133.0">
+               <children>
+                  <Label text="Avergage Velo: " />
+                  <Label text="0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="150.0">
+               <children>
+                  <Label text="Strike Percentage:" />
+                  <Label text="0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
