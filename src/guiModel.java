@@ -15,7 +15,7 @@ public class guiModel {
     ChoiceBox enterPitchType = new ChoiceBox();
 
     @FXML
-    TextField enterVelo;
+    TextField enterVelo = new TextField();
 
     pitchLog log = new pitchLog();
 
@@ -25,13 +25,16 @@ public class guiModel {
 
     private Enum pitchType;
 
+    String velo;
+
     public boolean checkSwing(){
         return  (swing.isSelected());
     }
 
     @FXML
-    private void setPitchVelo(){
-        this.pitchVelo = Integer.getInteger(enterVelo.toString());
+    public void setPitchVelo(){
+        this.velo = enterVelo.getText();
+        this.pitchVelo = Integer.parseInt(velo);
     }
 
 
