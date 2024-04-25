@@ -1,6 +1,5 @@
 import javafx.fxml.FXML;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.*;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
@@ -8,6 +7,20 @@ import java.awt.*;
 import java.util.Objects;
 
 public class guiModel {
+    @FXML
+    ProgressBar strikeBar;
+
+    @FXML
+    Label fastballStrike;
+
+    @FXML
+    Label ChangeUpStrike;
+
+    @FXML
+    Label BreakingBallStrike;
+
+    @FXML
+    Label strikePercentage;
 
     @FXML
     Label lastPitch;
@@ -71,102 +84,84 @@ public class guiModel {
     }
     @FXML
     private void Ten(){
-        log.addPitch(pitchLocation, pitchType, pitchVelo);
-        log.trackPitch(pitchVelo, pitchType);
         update();
 
     }
     @FXML
     private void Eleven(){
         this.pitchLocation = location.BallUpRight;
-        log.addPitch(pitchLocation, pitchType, pitchVelo);
-        log.trackPitch(pitchVelo, pitchType);
         update();
     }
     @FXML
     private void Twelve() {
         this.pitchLocation = location.BallDownLeft;
-        log.addPitch(pitchLocation, pitchType, pitchVelo);
-        log.trackPitch(pitchVelo, pitchType);
         update();
     }
     @FXML
     private void Thirteen() {
         this.pitchLocation = location.BallDownRight;
-        log.addPitch(pitchLocation, pitchType, pitchVelo);
-        log.trackPitch(pitchVelo, pitchType);
         update();
     }
     @FXML
     private void One() {
         this.pitchLocation = location.TopLeft;
-        log.addPitch(pitchLocation, pitchType, pitchVelo);
-        log.trackPitch(pitchVelo, pitchType);
         update();
     }
     @FXML
     private void Two() {
         this.pitchLocation = location.TopMiddle;
-        log.addPitch(pitchLocation, pitchType, pitchVelo);
-        log.trackPitch(pitchVelo, pitchType);
         update();
     }
     @FXML
     private void Three() {
         this.pitchLocation = location.TopRight;
-        log.addPitch(pitchLocation, pitchType, pitchVelo);
-        log.trackPitch(pitchVelo, pitchType);
         update();
     }
     @FXML
     private void Four() {
         this.pitchLocation = location.MiddleLeft;
-        log.addPitch(pitchLocation, pitchType, pitchVelo);
-        log.trackPitch(pitchVelo, pitchType);
         update();
     }
     @FXML
     private void Five() {
         this.pitchLocation = location.MiddleMiddle;
-        log.addPitch(pitchLocation, pitchType, pitchVelo);
-        log.trackPitch(pitchVelo, pitchType);
         update();
     }
     @FXML
     private void Six() {
         this.pitchLocation = location.MiddleRight;
-        log.addPitch(pitchLocation, pitchType, pitchVelo);
-        log.trackPitch(pitchVelo, pitchType);
         update();
     }
     @FXML
     private void Seven() {
         this.pitchLocation = location.BottomLeft;
-        log.addPitch(pitchLocation, pitchType, pitchVelo);
-        log.trackPitch(pitchVelo, pitchType);
         update();
     }
     @FXML
     private void Eight() {
         this.pitchLocation = location.BottomMiddle;
-        log.addPitch(pitchLocation, pitchType, pitchVelo);
-        log.trackPitch(pitchVelo, pitchType);
         update();
     }
     @FXML
     private void Nine() {
         this.pitchLocation = location.BottomRight;
-        log.addPitch(pitchLocation, pitchType, pitchVelo);
-        log.trackPitch(pitchVelo, pitchType);
         update();
     }
 
     private void update(){
+        log.addPitch(pitchLocation, pitchType, pitchVelo, swing.isSelected());
+        log.trackPitch(pitchVelo, pitchType);
         FastballVelo.setText(Integer.toString(log.fastballAvg()));
         ChangeUpVelo.setText(Integer.toString(log.changeUpAvg()));
         BreakingBallVelo.setText(Integer.toString(log.breakingBallAvg()));
         lastPitch.setText(log.seeLastPitch());
         pitchCount.setText(Integer.toString(log.pitchCount()));
+        strikePercentage.setText(Float.toString(log.strikePercent()));
+        fastballStrike.setText(Float.toString(log.fastballK()));
+        ChangeUpStrike.setText(Float.toString(log.changUpK()));
+        BreakingBallStrike.setText(Float.toString(log.breakingBallK()));
+        strikeBar.setProgress(log.strikePercent());
+
     }
 
     @FXML

@@ -50,10 +50,10 @@
             <HBox>
                <children>
                   <Label text="Overall Strike Percentage: " />
-                  <Label text="0" />
+                  <Label fx:id="strikePercentage" text="0" />
                </children>
             </HBox>
-            <ProgressBar prefWidth="200.0" progress="0.57" />
+            <ProgressBar fx:id="strikeBar" prefWidth="200.0" progress="0.02" />
             <Label text="Fastball" />
             <HBox>
                <children>
@@ -64,7 +64,7 @@
             <HBox layoutX="10.0" layoutY="199.0">
                <children>
                   <Label text="Strike Percentage:" />
-                  <Label text="0" />
+                  <Label fx:id="fastballStrike" text="0" />
                </children>
             </HBox>
             <Label text="Change-Up" />
@@ -77,7 +77,7 @@
             <HBox layoutX="10.0" layoutY="224.0">
                <children>
                   <Label text="Strike Percentage:" />
-                  <Label text="0" />
+                  <Label fx:id="ChangeUpStrike" text="0" />
                </children>
             </HBox>
             <Label text="Curve Ball" />
@@ -90,7 +90,7 @@
             <HBox layoutX="10.0" layoutY="150.0">
                <children>
                   <Label text="Strike Percentage:" />
-                  <Label text="0" />
+                  <Label fx:id="BreakingBallStrike" text="0" />
                </children>
             </HBox>
             <HBox>

@@ -7,12 +7,22 @@ public class pitchLog {
     ArrayList breakingBalls = new ArrayList<Integer>();
     calculator calculator = new calculator();
 
+    ArrayList strikes = new ArrayList<Enum>();
+
     Stack log = new Stack();
 
-    public void addPitch(Enum location, Enum pitch, int velo){
-        String add = location.toString()+" "+pitch.toString()+"  "+ String.valueOf(velo);
+    public void addPitch(Enum spot, Enum pitch, int velo, boolean swing){
+        String add = spot.toString()+" "+pitch.toString()+"  "+ String.valueOf(velo);
         log.push(add);
+        if (!spot.equals(location.BallUpLeft) && !spot.equals(location.BallUpRight) && !spot.equals(location.BallDownLeft)
+                && !spot.equals(location.BallDownRight) || swing) {
+            strikes.add(pitch);
+        }
+    }
 
+
+    public float strikePercent(){
+        return calculator.getStrikePercentage(strikes, log);
     }
 
     public String seeLastPitch(){
@@ -22,6 +32,18 @@ public class pitchLog {
 
     public int pitchCount(){
         return log.size();
+    }
+
+    public float fastballK(){
+        return calculator.pitchStrike(pitchTypes.FASTBALL, strikes, fastballs);
+    }
+
+    public float changUpK(){
+        return calculator.pitchStrike(pitchTypes.CHANGEUP, strikes, changeUps);
+    }
+
+    public float breakingBallK(){
+        return calculator.pitchStrike(pitchTypes.BREAKINGBALL, strikes, breakingBalls);
     }
 
     public void trackPitch(int velo, Enum pitch){
