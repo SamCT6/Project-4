@@ -57,7 +57,7 @@
             <HBox>
                <children>
                   <Label text="Avergage Velo: " />
-                  <Label text="0" />
+                  <Label fx:id="FastballVelo" text="0" />
                </children>
             </HBox>
             <HBox layoutX="10.0" layoutY="199.0">
@@ -70,7 +70,7 @@
             <HBox layoutX="10.0" layoutY="199.0">
                <children>
                   <Label text="Avergage Velo: " />
-                  <Label text="0" />
+                  <Label fx:id="ChangeUpVelo" text="0" />
                </children>
             </HBox>
             <HBox layoutX="10.0" layoutY="224.0">
@@ -83,7 +83,7 @@
             <HBox layoutX="10.0" layoutY="133.0">
                <children>
                   <Label text="Avergage Velo: " />
-                  <Label text="0" />
+                  <Label fx:id="BreakingBallVelo" text="0" />
                </children>
             </HBox>
             <HBox layoutX="10.0" layoutY="150.0">
