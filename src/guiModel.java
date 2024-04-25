@@ -10,6 +10,9 @@ import java.util.Objects;
 public class guiModel {
 
     @FXML
+    Label lastPitch;
+
+    @FXML
     Label FastballVelo;
 
     @FXML
@@ -70,6 +73,8 @@ public class guiModel {
         FastballVelo.setText(Integer.toString(log.fastballAvg()));
         ChangeUpVelo.setText(Integer.toString(log.changeUpAvg()));
         BreakingBallVelo.setText(Integer.toString(log.breakingBallAvg()));
+        lastPitch.setText(log.seeLastPitch());
+
     }
     @FXML
     private void Eleven(){
@@ -79,6 +84,7 @@ public class guiModel {
         FastballVelo.setText(Integer.toString(log.fastballAvg()));
         ChangeUpVelo.setText(Integer.toString(log.changeUpAvg()));
         BreakingBallVelo.setText(Integer.toString(log.breakingBallAvg()));
+        lastPitch.setText(log.seeLastPitch());
     }
     @FXML
     private void Twelve() {
@@ -88,6 +94,7 @@ public class guiModel {
         FastballVelo.setText(Integer.toString(log.fastballAvg()));
         ChangeUpVelo.setText(Integer.toString(log.changeUpAvg()));
         BreakingBallVelo.setText(Integer.toString(log.breakingBallAvg()));
+        lastPitch.setText(log.seeLastPitch());
     }
     @FXML
     private void Thirteen() {
@@ -97,6 +104,7 @@ public class guiModel {
         FastballVelo.setText(Integer.toString(log.fastballAvg()));
         ChangeUpVelo.setText(Integer.toString(log.changeUpAvg()));
         BreakingBallVelo.setText(Integer.toString(log.breakingBallAvg()));
+        lastPitch.setText(log.seeLastPitch());
     }
     @FXML
     private void One() {
@@ -106,6 +114,7 @@ public class guiModel {
         FastballVelo.setText(Integer.toString(log.fastballAvg()));
         ChangeUpVelo.setText(Integer.toString(log.changeUpAvg()));
         BreakingBallVelo.setText(Integer.toString(log.breakingBallAvg()));
+        lastPitch.setText(log.seeLastPitch());
     }
     @FXML
     private void Two() {
@@ -115,6 +124,7 @@ public class guiModel {
         FastballVelo.setText(Integer.toString(log.fastballAvg()));
         ChangeUpVelo.setText(Integer.toString(log.changeUpAvg()));
         BreakingBallVelo.setText(Integer.toString(log.breakingBallAvg()));
+        lastPitch.setText(log.seeLastPitch());
     }
     @FXML
     private void Three() {
@@ -124,6 +134,7 @@ public class guiModel {
         FastballVelo.setText(Integer.toString(log.fastballAvg()));
         ChangeUpVelo.setText(Integer.toString(log.changeUpAvg()));
         BreakingBallVelo.setText(Integer.toString(log.breakingBallAvg()));
+        lastPitch.setText(log.seeLastPitch());
     }
     @FXML
     private void Four() {
@@ -133,6 +144,7 @@ public class guiModel {
         FastballVelo.setText(Integer.toString(log.fastballAvg()));
         ChangeUpVelo.setText(Integer.toString(log.changeUpAvg()));
         BreakingBallVelo.setText(Integer.toString(log.breakingBallAvg()));
+        lastPitch.setText(log.seeLastPitch());
     }
     @FXML
     private void Five() {
@@ -142,6 +154,7 @@ public class guiModel {
         FastballVelo.setText(Integer.toString(log.fastballAvg()));
         ChangeUpVelo.setText(Integer.toString(log.changeUpAvg()));
         BreakingBallVelo.setText(Integer.toString(log.breakingBallAvg()));
+        lastPitch.setText(log.seeLastPitch());
     }
     @FXML
     private void Six() {
@@ -151,6 +164,7 @@ public class guiModel {
         FastballVelo.setText(Integer.toString(log.fastballAvg()));
         ChangeUpVelo.setText(Integer.toString(log.changeUpAvg()));
         BreakingBallVelo.setText(Integer.toString(log.breakingBallAvg()));
+        lastPitch.setText(log.seeLastPitch());
     }
     @FXML
     private void Seven() {
@@ -160,6 +174,7 @@ public class guiModel {
         FastballVelo.setText(Integer.toString(log.fastballAvg()));
         ChangeUpVelo.setText(Integer.toString(log.changeUpAvg()));
         BreakingBallVelo.setText(Integer.toString(log.breakingBallAvg()));
+        lastPitch.setText(log.seeLastPitch());
     }
     @FXML
     private void Eight() {
@@ -169,6 +184,7 @@ public class guiModel {
         FastballVelo.setText(Integer.toString(log.fastballAvg()));
         ChangeUpVelo.setText(Integer.toString(log.changeUpAvg()));
         BreakingBallVelo.setText(Integer.toString(log.breakingBallAvg()));
+        lastPitch.setText(log.seeLastPitch());
     }
     @FXML
     private void Nine() {
@@ -178,6 +194,7 @@ public class guiModel {
         FastballVelo.setText(Integer.toString(log.fastballAvg()));
         ChangeUpVelo.setText(Integer.toString(log.changeUpAvg()));
         BreakingBallVelo.setText(Integer.toString(log.breakingBallAvg()));
+        lastPitch.setText(log.seeLastPitch());
 
 
     }
