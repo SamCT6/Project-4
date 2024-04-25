@@ -20,6 +20,10 @@ public class pitchLog {
         return Objects.toString(log.peek());
     }
 
+    public int pitchCount(){
+        return log.size();
+    }
+
     public void trackPitch(int velo, Enum pitch){
         if (pitch.equals(pitchTypes.FASTBALL)){
             fastballs.add(velo);
