@@ -19,7 +19,7 @@ public class calculator {
     public float getStrikePercentage(ArrayList<Enum> strikes, Stack<String> pitchCount) {
         System.out.println(strikes.size());
         System.out.println(pitchCount.size());
-        return ((float) strikes.size() /pitchCount.size());
+        return ((float) strikes.size() /pitchCount.size()* 100);
     }
 
     public float pitchStrike(Enum pitch, ArrayList<Enum> strikes, ArrayList<Integer> allPitches){
@@ -29,7 +29,7 @@ public class calculator {
                 total ++;
         }
         }
-        return ((float) total/allPitches.size());
+        return ((float) total/allPitches.size()*100);
     }
 
 
