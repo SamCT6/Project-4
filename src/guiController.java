@@ -3,10 +3,9 @@ import javafx.scene.control.*;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-import java.awt.*;
 import java.util.Objects;
 
-public class guiModel {
+public class guiController {
     @FXML
     ProgressBar strikeBar;
 
